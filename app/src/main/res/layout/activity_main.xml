@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="219dp"
+        android:layout_marginEnd="12dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/mainText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="34dp"
+            android:fontFamily="@font/ys_music"
+            android:text="До {eventName} осталось:"
+            android:textAlignment="center"
+            android:textColor="@color/highText"
+            android:textSize="24dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:background="@drawable/shape_rounded_variants"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="335dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:progress="25"
+                android:progressDrawable="@drawable/shape_progressbar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textStartProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/ys_music"
+                android:text="0%"
+                android:textAlignment="center"
+                android:textColor="@color/mediumText"
+                android:textSize="8sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+            <TextView
+                android:id="@+id/textEndProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="9dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/ys_music"
+                android:text="100%"
+                android:textAlignment="center"
+                android:textColor="@color/mediumText"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="175dp"
+                android:minHeight="172dp"
+                android:orientation="vertical"
+                android:background="@drawable/shape_rounded_variants15">
+                <TextView
+                    android:id="@+id/textNextEvent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/ys_music"
+                    android:text="Следующее\nсобытие"
+                    android:textAlignment="center"
+                    android:textColor="@color/highText"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/textNextEventName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="33dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/ys_music"
+                    android:text="{nextEventName}"
+                    android:textAlignment="center"
+                    android:textColor="@color/mediumText"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/textNextEventData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="33dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/ys_music"
+                    android:text="Через 3 дня"
+                    android:textAlignment="center"
+                    android:textColor="@color/unactiveText"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="175dp"
+                android:minHeight="172dp"
+                android:layout_marginStart="18dp"
+                android:background="@drawable/shape_rounded_variants15">
+
+                <TextView
+                    android:id="@+id/textСountdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/ys_music"
+                    android:text="Обратный\nотсчёт"
+                    android:textAlignment="center"
+                    android:textColor="@color/highText"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <FrameLayout
+                    android:id="@+id/circle3"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/shape_circe_variants2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textСountdown">
+
+                    <TextView
+                        android:id="@+id/textMM"
+                        style="@style/CircleValueText"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="8dp"
+                        android:text="55" />
+
+                    <TextView
+                        android:id="@+id/textMinutes"
+                        style="@style/CircleLabelText"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="34dp"
+                        android:text="минут" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/circle2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/shape_circe_variants2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textСountdown">
+
+                    <TextView
+                        android:id="@+id/textHH"
+                        style="@style/CircleValueText"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="8dp"
+                        android:text="55" />
+
+                    <TextView
+                        android:id="@+id/textHours"
+                        style="@style/CircleLabelText"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="34dp"
+                        android:text="часов" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/circle1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/shape_circe_variants"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textСountdown">
+
+                    <TextView
+                        android:id="@+id/textDD"
+                        style="@style/CircleValueText"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="8dp"
+                        android:text="55" />
+
+                    <TextView
+                        android:id="@+id/textDay"
+                        style="@style/CircleLabelText"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="34dp"
+                        android:text="дней" />
+                </FrameLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

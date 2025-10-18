@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default colors -->
+    <color name="bg">#121212</color>
+    <color name="surface">#1E1E1E</color>
+    <color name="Primary">#7C5AE8</color>
+    <color name="LightPrimary">#597C5AE8</color>
+    <color name="Secondary">#FF8FA0</color>
+    <color name="circle1">#F5BD1F</color>
+    <color name="circle2">#CCF5BD1F</color>
+
+    <!-- Text colors -->
+    <color name="highText">#FFFFFF</color>
+    <color name="mediumText">#B3B3B3</color>
+    <color name="unactiveText">#6A6A6A</color>
+    <color name="successText">#81C784 </color>
+
+</resources>
